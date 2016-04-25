@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CarRecordVC.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +21,43 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    //3D Touch
+    if (application.shortcutItems.count == 0) {
+        [self configShortCutItems];
+    }
+    UIApplicationShortcutItem *shortItem = launchOptions[UIApplicationLaunchOptionsShortcutItemKey];
+    if (shortItem) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self actionShortcutItem:shortItem];
+        });
+        return NO;
+    }
     return YES;
+}
+
+#pragma mark -3D Touch
+-(void)configShortCutItems {
+    if (sc_systermVertion >= 9.0f) {
+        UIApplicationShortcutItem *item1 = [[UIApplicationShortcutItem alloc] initWithType:@"one" localizedTitle:@"一键发车" localizedSubtitle:nil icon:nil userInfo:nil];
+        UIApplicationShortcutItem *item2 = [[UIApplicationShortcutItem alloc] initWithType:@"two" localizedTitle:@"新建评估" localizedSubtitle:nil icon:nil userInfo:nil];
+        [UIApplication sharedApplication].shortcutItems = @[item1, item2];
+    }
+}
+
+-(void)actionShortcutItem:(UIApplicationShortcutItem *)shortcutItem {
+    if ([shortcutItem.type isEqualToString:@"one"]) {
+        CarRecordVC *VC= [[CarRecordVC alloc] init];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.rootVC showViewController:VC sender:nil];
+        });
+    } else if ([shortcutItem.type isEqualToString:@"two"]) {
+        DFCNewAssessVC *VC= [[DFCNewAssessVC alloc] init];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.rootVC presentViewController:VC animated:YES completion:^{
+            }];
+        });
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

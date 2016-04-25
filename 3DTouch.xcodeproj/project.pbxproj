@@ -13,6 +13,7 @@
 		478F2AD51CCDFB3D00B7D752 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478F2AD31CCDFB3D00B7D752 /* LaunchScreen.storyboard */; };
 		478F2AE01CCDFB3D00B7D752 /* _DTouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 478F2ADF1CCDFB3D00B7D752 /* _DTouchTests.m */; };
 		478F2AEB1CCDFB3D00B7D752 /* _DTouchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 478F2AEA1CCDFB3D00B7D752 /* _DTouchUITests.m */; };
+		478F2AFA1CCDFBA200B7D752 /* CarRecordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 478F2AF91CCDFBA200B7D752 /* CarRecordVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		478F2AE61CCDFB3D00B7D752 /* 3DTouchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 3DTouchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		478F2AEA1CCDFB3D00B7D752 /* _DTouchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _DTouchUITests.m; sourceTree = "<group>"; };
 		478F2AEC1CCDFB3D00B7D752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		478F2AF81CCDFBA200B7D752 /* CarRecordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarRecordVC.h; sourceTree = "<group>"; };
+		478F2AF91CCDFBA200B7D752 /* CarRecordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarRecordVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,8 @@
 			children = (
 				478F2ACE1CCDFB3D00B7D752 /* AppDelegate.h */,
 				478F2ACF1CCDFB3D00B7D752 /* AppDelegate.m */,
+				478F2AF81CCDFBA200B7D752 /* CarRecordVC.h */,
+				478F2AF91CCDFBA200B7D752 /* CarRecordVC.m */,
 				478F2AD11CCDFB3D00B7D752 /* Assets.xcassets */,
 				478F2AD31CCDFB3D00B7D752 /* LaunchScreen.storyboard */,
 				478F2AD61CCDFB3D00B7D752 /* Info.plist */,
@@ -263,6 +268,7 @@
 			files = (
 				478F2AD01CCDFB3D00B7D752 /* AppDelegate.m in Sources */,
 				478F2ACD1CCDFB3D00B7D752 /* main.m in Sources */,
+				478F2AFA1CCDFBA200B7D752 /* CarRecordVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
