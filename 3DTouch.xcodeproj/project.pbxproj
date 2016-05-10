@@ -16,6 +16,8 @@
 		478F2AFA1CCDFBA200B7D752 /* CarRecordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 478F2AF91CCDFBA200B7D752 /* CarRecordVC.m */; };
 		47FB70801CE1737600C9D8C7 /* DFCNewAssessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 47FB707F1CE1737600C9D8C7 /* DFCNewAssessVC.m */; };
 		47FB70831CE1740200C9D8C7 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47FB70821CE1740200C9D8C7 /* RootViewController.m */; };
+		47FB70861CE18D3A00C9D8C7 /* PeekViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47FB70851CE18D3A00C9D8C7 /* PeekViewController.m */; };
+		47FB70891CE1907600C9D8C7 /* PopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47FB70881CE1907600C9D8C7 /* PopViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		47FB707F1CE1737600C9D8C7 /* DFCNewAssessVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFCNewAssessVC.m; sourceTree = "<group>"; };
 		47FB70811CE1740200C9D8C7 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		47FB70821CE1740200C9D8C7 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		47FB70841CE18D3A00C9D8C7 /* PeekViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeekViewController.h; sourceTree = "<group>"; };
+		47FB70851CE18D3A00C9D8C7 /* PeekViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeekViewController.m; sourceTree = "<group>"; };
+		47FB70871CE1907600C9D8C7 /* PopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopViewController.h; sourceTree = "<group>"; };
+		47FB70881CE1907600C9D8C7 /* PopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,10 @@
 				478F2AF91CCDFBA200B7D752 /* CarRecordVC.m */,
 				47FB707E1CE1737600C9D8C7 /* DFCNewAssessVC.h */,
 				47FB707F1CE1737600C9D8C7 /* DFCNewAssessVC.m */,
+				47FB70841CE18D3A00C9D8C7 /* PeekViewController.h */,
+				47FB70851CE18D3A00C9D8C7 /* PeekViewController.m */,
+				47FB70871CE1907600C9D8C7 /* PopViewController.h */,
+				47FB70881CE1907600C9D8C7 /* PopViewController.m */,
 				478F2AD11CCDFB3D00B7D752 /* Assets.xcassets */,
 				478F2AD31CCDFB3D00B7D752 /* LaunchScreen.storyboard */,
 				478F2AD61CCDFB3D00B7D752 /* Info.plist */,
@@ -277,8 +287,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				478F2AD01CCDFB3D00B7D752 /* AppDelegate.m in Sources */,
+				47FB70861CE18D3A00C9D8C7 /* PeekViewController.m in Sources */,
 				47FB70801CE1737600C9D8C7 /* DFCNewAssessVC.m in Sources */,
 				478F2ACD1CCDFB3D00B7D752 /* main.m in Sources */,
+				47FB70891CE1907600C9D8C7 /* PopViewController.m in Sources */,
 				478F2AFA1CCDFBA200B7D752 /* CarRecordVC.m in Sources */,
 				47FB70831CE1740200C9D8C7 /* RootViewController.m in Sources */,
 			);
