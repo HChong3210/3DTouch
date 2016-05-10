@@ -14,6 +14,8 @@
 		478F2AE01CCDFB3D00B7D752 /* _DTouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 478F2ADF1CCDFB3D00B7D752 /* _DTouchTests.m */; };
 		478F2AEB1CCDFB3D00B7D752 /* _DTouchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 478F2AEA1CCDFB3D00B7D752 /* _DTouchUITests.m */; };
 		478F2AFA1CCDFBA200B7D752 /* CarRecordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 478F2AF91CCDFBA200B7D752 /* CarRecordVC.m */; };
+		47FB70801CE1737600C9D8C7 /* DFCNewAssessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 47FB707F1CE1737600C9D8C7 /* DFCNewAssessVC.m */; };
+		47FB70831CE1740200C9D8C7 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47FB70821CE1740200C9D8C7 /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,10 @@
 		478F2AEC1CCDFB3D00B7D752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		478F2AF81CCDFBA200B7D752 /* CarRecordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarRecordVC.h; sourceTree = "<group>"; };
 		478F2AF91CCDFBA200B7D752 /* CarRecordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarRecordVC.m; sourceTree = "<group>"; };
+		47FB707E1CE1737600C9D8C7 /* DFCNewAssessVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFCNewAssessVC.h; sourceTree = "<group>"; };
+		47FB707F1CE1737600C9D8C7 /* DFCNewAssessVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFCNewAssessVC.m; sourceTree = "<group>"; };
+		47FB70811CE1740200C9D8C7 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		47FB70821CE1740200C9D8C7 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +107,12 @@
 			children = (
 				478F2ACE1CCDFB3D00B7D752 /* AppDelegate.h */,
 				478F2ACF1CCDFB3D00B7D752 /* AppDelegate.m */,
+				47FB70811CE1740200C9D8C7 /* RootViewController.h */,
+				47FB70821CE1740200C9D8C7 /* RootViewController.m */,
 				478F2AF81CCDFBA200B7D752 /* CarRecordVC.h */,
 				478F2AF91CCDFBA200B7D752 /* CarRecordVC.m */,
+				47FB707E1CE1737600C9D8C7 /* DFCNewAssessVC.h */,
+				47FB707F1CE1737600C9D8C7 /* DFCNewAssessVC.m */,
 				478F2AD11CCDFB3D00B7D752 /* Assets.xcassets */,
 				478F2AD31CCDFB3D00B7D752 /* LaunchScreen.storyboard */,
 				478F2AD61CCDFB3D00B7D752 /* Info.plist */,
@@ -267,8 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				478F2AD01CCDFB3D00B7D752 /* AppDelegate.m in Sources */,
+				47FB70801CE1737600C9D8C7 /* DFCNewAssessVC.m in Sources */,
 				478F2ACD1CCDFB3D00B7D752 /* main.m in Sources */,
 				478F2AFA1CCDFBA200B7D752 /* CarRecordVC.m in Sources */,
+				47FB70831CE1740200C9D8C7 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +498,7 @@
 				478F2AF11CCDFB3D00B7D752 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		478F2AF21CCDFB3D00B7D752 /* Build configuration list for PBXNativeTarget "3DTouchTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +507,7 @@
 				478F2AF41CCDFB3D00B7D752 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		478F2AF51CCDFB3D00B7D752 /* Build configuration list for PBXNativeTarget "3DTouchUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +516,7 @@
 				478F2AF71CCDFB3D00B7D752 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

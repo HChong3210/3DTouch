@@ -8,9 +8,15 @@
 
 #import "AppDelegate.h"
 #import "CarRecordVC.h"
+#import "DFCNewAssessVC.h"
+#import "RootViewController.h"
 
+
+// ios版本
+#define sc_systermVertion  [[UIDevice currentDevice] systemVersion].intValue
 @interface AppDelegate ()
 
+@property (nonatomic,strong) RootViewController *rootVC;
 @end
 
 @implementation AppDelegate
@@ -22,6 +28,11 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    
+    self.rootVC = [[RootViewController alloc] init];
+    UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:self.rootVC];
+    self.window.rootViewController = navc;
+    
     //3D Touch
     if (application.shortcutItems.count == 0) {
         [self configShortCutItems];
@@ -29,7 +40,7 @@
     UIApplicationShortcutItem *shortItem = launchOptions[UIApplicationLaunchOptionsShortcutItemKey];
     if (shortItem) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self actionShortcutItem:shortItem];
+            [self actionShortcutItem:shortItem];//杀进程时调用
         });
         return NO;
     }
@@ -37,6 +48,13 @@
 }
 
 #pragma mark -3D Touch
+//后台时调用
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(nonnull void (^)(BOOL))completionHandler {
+    if (shortcutItem) {
+        [self actionShortcutItem:shortcutItem];
+    }
+}
+
 -(void)configShortCutItems {
     if (sc_systermVertion >= 9.0f) {
         UIApplicationShortcutItem *item1 = [[UIApplicationShortcutItem alloc] initWithType:@"one" localizedTitle:@"一键发车" localizedSubtitle:nil icon:nil userInfo:nil];
@@ -48,12 +66,12 @@
 -(void)actionShortcutItem:(UIApplicationShortcutItem *)shortcutItem {
     if ([shortcutItem.type isEqualToString:@"one"]) {
         CarRecordVC *VC= [[CarRecordVC alloc] init];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.rootVC showViewController:VC sender:nil];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.rootVC.navigationController showViewController:VC sender:nil];
         });
     } else if ([shortcutItem.type isEqualToString:@"two"]) {
         DFCNewAssessVC *VC= [[DFCNewAssessVC alloc] init];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self.rootVC presentViewController:VC animated:YES completion:^{
             }];
         });
